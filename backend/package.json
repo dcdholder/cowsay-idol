@@ -2,7 +2,7 @@
   "name": "animated-cowsay",
   "version": "0.0.0",
   "description": "An API to display an animated cowsay singing a song from a tracklist.",
-  "main": "animated-cowsay.js",
+  "main": "animated-cowsay-backend.js",
   "dependencies": {
     "express": "latest",
     "cors": "latest",

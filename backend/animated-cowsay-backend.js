@@ -12,6 +12,12 @@ let app = express();
 
 let directory = "./lyrics";
 
+//required for deployment to Google Cloud Functions
+exports.cowsayIdol = function cowsayIdol(req,res) {
+  res.setHeader('Content-Type', 'application/json');
+  generateCowsayFramesFromRandomFilename(res);
+};
+
 app.use(cors({origin: "*"}));
 app.get('/', (req,res) => {
   res.setHeader('Content-Type', 'application/json');
