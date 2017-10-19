@@ -3,6 +3,8 @@ Written to practise with Node.js. cowsay randomly chooses a song from a list of 
 
 The backend produces the frames of an ASCII animation featuring cowsay, and the frontend consumes them.
 
+[Click here to see it in action.](http://cowidol.chilked.com/)
+
 ## Deployment
 - Dump text files containing lyrics in the backend/lyrics directory. Filenames don't matter. 
 - Deploy the backend on your platform of choice. Just run "npm install" + "node animated-cowsay-backend.js" to test on your local machine.
