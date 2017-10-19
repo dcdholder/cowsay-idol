@@ -75,7 +75,18 @@ function generateCowsayFramesFromLyrics(lyricsByLine) {
       }
     }
 
-    cowsayFrames.push(cowsay.say(cowsayArguments))
+    cowsayFrames.push(cowsay.say(cowsayArguments));
+  }
+
+  let numBufferFrames = 3;
+
+  let bufferCowsayArguments = {
+    text: "...",
+    e: "--"
+  }
+
+  for (let bufferFrameIndex=0; bufferFrameIndex<numBufferFrames; bufferFrameIndex++) {
+    cowsayFrames.push(cowsay.say(bufferCowsayArguments));
   }
 
   return cowsayFrames;
