@@ -15,12 +15,17 @@ let directory = "./lyrics";
 //required for deployment to Google Cloud Functions
 exports.cowsayIdol = function cowsayIdol(req,res) {
   res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
   generateCowsayFramesFromRandomFilename(res);
 };
 
 app.use(cors({origin: "*"}));
 app.get('/', (req,res) => {
   res.setHeader('Content-Type', 'application/json');
+
   generateCowsayFramesFromRandomFilename(res);
 });
 
