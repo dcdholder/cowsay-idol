@@ -13,6 +13,7 @@ function startAnimationLoopHandler(e) {
 }
 
 function startAnimationLoop(cowsayFrames) {
+  displayNextFrame(cowsayFrames) //immediately show the first frame -- otherwise nothing would show up for frameTime
   setInterval(() => {displayNextFrame(cowsayFrames)},frameTime);
 }
 
